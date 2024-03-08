@@ -21,7 +21,7 @@ jobs:
         run: yarn build
 
       - name: Add CNAME file
-        run: echo 'docsv5.agou-ops.cn' > build/CNAME
+        run: echo 'docsv5.agou-ops.cn' > dist/CNAME
 
       # 部署到 GitHub Pages 的热门选择：
       # 文档：https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
