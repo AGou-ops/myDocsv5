@@ -476,3 +476,14 @@ tmpfs                183M     0  183M    0% /run/user/0
 
 
 转载自：https://www.jianshu.com/p/154c69a7a5d2
+
+
+# 三、LVM缩容/home，扩容/目录
+```bash
+umount /home
+lvreduce -L -50G /dev/mapper/centos-home
+lvextend -L +50G /dev/mapper/centos-root
+resize2fs /dev/mapper/centos-root
+xfs_growfs /dev/centos/root
+
+```
